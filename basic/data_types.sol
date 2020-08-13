@@ -3,8 +3,7 @@ pragma solidity ^0.5.9;
 contract DataTypes {
 
 
-	// Data types
-
+	// DATA TYPES
     
     string public name = "John";
 
@@ -17,10 +16,7 @@ contract DataTypes {
     bool public isSent = true;
     
 
-
-
-    // Variable types
-
+    // VARIABLE TYPES
 
 	// the variables cannot be modified after the contract has been constructed
     // the value has to be fixed at compile-time
@@ -31,10 +27,7 @@ contract DataTypes {
     uint immutable minBid = 1000;	
 
 
-
-
-    // Variable visibility
-
+    // VARIABLE VISIBILITY
 
     string public name;
     string private name;
@@ -44,10 +37,8 @@ contract DataTypes {
     // NOTE: the default visibility is "private"
 
 
-
-
-    // Setter and Getter
-
+    // ACCESSOR
+    
     function setName(string nm) public {
         name = nm;
         
