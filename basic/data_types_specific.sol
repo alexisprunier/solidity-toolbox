@@ -4,7 +4,7 @@ contract DataTypesSpecific {
 
     // ADRESSE
 
-    // In Ethereum and Solidity, an address if of 20 byte value size (160 bits or 40 hex characters).
+    // In Ethereum and Solidity, an address if of 20 bytesvalue size (160 bits or 40 hex characters).
 
     address ad = 0xc0ffee254729296a45a3885639AC7E10F9d54979
 
@@ -14,23 +14,6 @@ contract DataTypesSpecific {
     ad.call(...) returns (bool):                // Issue low-level CALL, returns false on failure, forwards all available gas, adjustable
     ad.callcode(...) returns (bool):            // Issue low-level CALLCODE, returns false on failure, forwards all available gas, adjustable
     ad.delegatecall(...) returns (bool)         // Issue low-level DELEGATECALL, returns false on failure, forwards all available gas, adjustable
-
-
-    // MAPPING
-	
-    mapping(address => uint) public userLevel;
-
-    userLevel[firstAddress] = 4
-    uint selectedLevel = userLevel[firstAddress]
-
-
-    // STRUCTURE
-
-    struct customer {
-        uint idNum;
-        string name;
-        uint amount;
-    }
 
 
     // BLOCK
