@@ -37,15 +37,37 @@ contract DataTypes {
     // NOTE: the default visibility is "private"
 
 
-    // ACCESSOR
+    // ARRAY
+
+    uint[] count;
+    count[0] = 1
+    count[1] = 2
+    uint selectedInt = count[0]
+
+    // MAPPING
     
-    function setName(string nm) public {
-        name = nm;
-        
+    mapping(address => uint) public userLevel;
+
+    userLevel[firstAddress] = 4
+    uint selectedLevel = userLevel[firstAddress]
+
+
+    // STRUCTURE
+
+    struct customer {
+        uint idNum;
+        string name;
+        uint amount;
     }
-    
-    function setAmount(uint x) public {
-        amount  = x;
+
+    // ENUM
+
+    enum Stage {Init, Reg, Vote, Done}
+    Stage public stage
+    stage = Stage.Init
+
+    if (stage == Stage.Init) {
+        stage = Stage.Reg
     }
 
 }
