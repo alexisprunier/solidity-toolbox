@@ -1,6 +1,8 @@
 pragma solidity ^0.5.9; 
 
 contract Accessor {
+
+	// The getter functions are automatically generated for public variables
     
     string public name = "John";
     int public amount = 10;
