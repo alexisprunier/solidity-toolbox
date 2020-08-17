@@ -1,6 +1,6 @@
 pragma solidity ^0.5.9; 
 
-contract DataTypes {
+contract DataType {
 
 
 	// DATA TYPES
@@ -44,6 +44,11 @@ contract DataTypes {
     count[1] = 2
     uint selectedInt = count[0]
 
+    uint[] proposals;
+    proposals.length = 3;
+
+    uint[3] artefact;
+
     // MAPPING
     
     mapping(address => uint) public userLevel;
@@ -58,12 +63,12 @@ contract DataTypes {
         uint idNum;
         string name;
         uint amount;
-    }
+    };
 
     // ENUM
 
-    enum Stage {Init, Reg, Vote, Done}
-    Stage public stage
+    enum Stage {Init, Reg, Vote, Done};
+    Stage public stage;
     stage = Stage.Init
 
     if (stage == Stage.Init) {
